@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { Photo } from './components/Photo/Photo';
+import Button from '@mui/material/Button';
 
 function App() {
   const [photos, setPhotos] = useState([])
@@ -14,7 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      {photos.map(photo => <Photo url={photo.url} />)}
+      <Button variant="contained">Contained</Button>
+      <div>
+        {photos.map(photo => <Photo url={photo.url} />)}
+      </div>
     </div>
   );
 }
